@@ -1,0 +1,81 @@
+<head>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "HZd14m12FOckoE8LX",
+            });
+        })();
+    </script>
+</head>
+<div class="form-container">
+    <p>So kommt man zu der Admin Seite von EmailJS</p>
+    <a>https://dashboard.emailjs.com/admin</a>
+    <h2>Bestellformular</h2>
+    <form onsubmit="sendMail(); return false;">
+        <div class="form-group">
+            <label for="first-name">Vorname</label>
+            <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Nachname</label>
+            <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="street">Straße</label>
+            <input type="text" id="street" name="street" required>
+        </div>
+        <div class="form-group">
+            <label for="city">Stadt</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+            <label for="country">Land</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        <div class="form-group">
+            <label for="product-type">Produktart</label>
+            <select id="product-type" name="product-type">
+                <option value="tshirt">T-Shirt</option>
+                <option value="hoodie">Hoodie</option>
+                <option value="pullover">Pullover</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="size">Größe</label>
+            <select id="size" name="size">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+        <button type="submit" onclick="sendMail()" class="submit-btn">Bestellung absenden</button>
+    </form>
+</div>
+
+<script>
+    function sendMail() {
+        let params = {
+            "first-name": document.getElementById("first-name").value,
+            "last-name": document.getElementById("last-name").value,
+            "street": document.getElementById("street").value,
+            "city": document.getElementById("city").value,
+            "country": document.getElementById("country").value,
+            "product-type": document.getElementById("product-type").value,
+            "size": document.getElementById("size").value
+        };
+
+
+        emailjs.send("service_v0lgx74", "template_k66svsn", params)
+            .then(function(response) {
+                alert("Bestellung erfolgreich gesendet!");
+                console.log("SUCCESS!", response.status, response.text);
+            }, function(error) {
+                alert("Bestellung konnte nicht gesendet werden.");
+                console.log("FAILED...", error);
+            });
+    }
+</script>

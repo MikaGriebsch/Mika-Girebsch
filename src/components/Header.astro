@@ -156,15 +156,19 @@ import { SITE_TITLE } from '../consts';
 <script>
     function openMenu() {
         const header = document.querySelector('header');
+        const menuImage = document.getElementById('menu-image');
+
         if (header.classList.contains('header-expanded')) {
             header.classList.remove('header-expanded');
             header.classList.add('header-collapsed'); // Animation für Schließen
+            menuImage.src = '/menu-svgrepo-com.svg'; // Zurück zum Menü-Icon
         } else {
             header.classList.remove('header-collapsed');
             header.classList.add('header-expanded'); // Animation für Öffnen
+            menuImage.src = '/icon-close.svg'; // Wechsel zum Schließen-Icon
         }
     }
-    
+
     document.addEventListener('DOMContentLoaded', () => {
         const menuImage = document.getElementById('menu-image');
         menuImage.addEventListener('click', () => {
