@@ -1,0 +1,47 @@
+/* MacOS Window Style */
+.macos-window {
+    background-color: #F8FBFE;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.macos-window-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.macos-circle {
+    padding: 0 4px;
+}
+
+.macos-button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.macos-red {
+    background-color: #ff605c;
+}
+
+.macos-yellow {
+    background-color: #ffbd44;
+}
+
+.macos-green {
+    background-color: #00ca4e;
+}
+
+.macos-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}

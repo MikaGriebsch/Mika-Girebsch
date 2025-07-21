@@ -3,39 +3,65 @@
         <h1 class="container-header outlined-text-active">PROJEKTE</h1>
         <div class="card-container">
             <div class="card">
-                <a target="_blank" href="https://frauenarzt-dr-dagmar-rossner.de/">
-                    <img src="/Rossner.png">
-                </a>
-                <div class="description">
-                    <div class="left">
-                        <a target="_blank" href="https://frauenarzt-dr-dagmar-rossner.de/" class="header">
-                            DR. DAGMAR ROßNER
-                        </a>
-                        <p class="subheader">
-                            Webauftritt
-                        </p>
+                <div class="tools">
+                    <div class="circle">
+                        <span class="red box"></span>
                     </div>
-                    <div class="right">
-                        <p class="time-button">2024</p>
+                    <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <a target="_blank" href="https://frauenarzt-dr-dagmar-rossner.de/">
+                        <img src="/Rossner.png">
+                    </a>
+                    <div class="description">
+                        <div class="left">
+                            <a target="_blank" href="https://frauenarzt-dr-dagmar-rossner.de/" class="header">
+                                DR. DAGMAR ROßNER
+                            </a>
+                            <p class="subheader">
+                                Webauftritt
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="time-button">2024</p>
+                        </div>
                     </div>
                 </div>
             </div>
         
             <div class="card hover-image">
-                <a target="_blank" href="https://www.flaeming-wildhandel.de/">
-                    <img src="/Wildhandel.png">
-                </a>
-                <div class="description">
-                    <div class="left">
-                        <a target="_blank" href="https://www.flaeming-wildhandel.de/" class="header">
-                            FLÄMING WILDHANDEL
-                        </a>
-                        <p class="subheader">
-                            Webauftritt
-                        </p>
+                <div class="tools">
+                    <div class="circle">
+                        <span class="red box"></span>
                     </div>
-                    <div class="right">
-                        <p class="time-button">2023</p>
+                    <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <a target="_blank" href="https://www.flaeming-wildhandel.de/">
+                        <img src="/Wildhandel.png">
+                    </a>
+                    <div class="description">
+                        <div class="left">
+                            <a target="_blank" href="https://www.flaeming-wildhandel.de/" class="header">
+                                FLÄMING WILDHANDEL
+                            </a>
+                            <p class="subheader">
+                                Webauftritt
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="time-button">2023</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,16 +95,56 @@
 
     .card {
         width: 48.5%;
-        background-color: var(--accent-background);
+        background-color: #F8FBFE;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .card img {
         border-radius: 0;
+        width: 100%;
     }
-
-    .card {
-        border: 2px solid var(--accent-background);
-        border-radius: 30px;
+    
+    .tools {
+        display: flex;
+        align-items: center;
+        padding: 9px;
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .circle {
+        padding: 0 4px;
+    }
+    
+    .box {
+        display: inline-block;
+        align-items: center;
+        width: 10px;
+        height: 10px;
+        padding: 1px;
+        border-radius: 50%;
+    }
+    
+    .red {
+        background-color: #ff605c;
+    }
+    
+    .yellow {
+        background-color: #ffbd44;
+    }
+    
+    .green {
+        background-color: #00ca4e;
+    }
+    
+    .card__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
 
     .hover-image {
