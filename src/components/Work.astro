@@ -15,12 +15,12 @@
                     </div>
                 </div>
                 <div class="card__content">
-                    <a target="_blank" href="https://frauenarzt-dr-dagmar-rossner.de/">
+                    <a href="/projects/dr-dagmar-rossner">
                         <img src="/Rossner.png">
                     </a>
                     <div class="description">
                         <div class="left">
-                            <a target="_blank" href="https://frauenarzt-dr-dagmar-rossner.de/" class="header">
+                            <a href="/projects/dr-dagmar-rossner" class="header">
                                 DR. DAGMAR ROßNER
                             </a>
                             <p class="subheader">
@@ -47,12 +47,12 @@
                     </div>
                 </div>
                 <div class="card__content">
-                    <a target="_blank" href="https://www.flaeming-wildhandel.de/">
+                    <a href="/projects/flaeming-wildhandel">
                         <img src="/Wildhandel.png">
                     </a>
                     <div class="description">
                         <div class="left">
-                            <a target="_blank" href="https://www.flaeming-wildhandel.de/" class="header">
+                            <a href="/projects/flaeming-wildhandel" class="header">
                                 FLÄMING WILDHANDEL
                             </a>
                             <p class="subheader">
@@ -101,11 +101,23 @@
         display: flex;
         flex-direction: column;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
     .card img {
         border-radius: 0;
         width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.02);
     }
     
     .tools {

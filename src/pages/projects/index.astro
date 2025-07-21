@@ -1,0 +1,340 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+
+const projects = await getCollection('projects');
+const sortedProjects = projects.sort((a, b) => parseInt(b.data.year) - parseInt(a.data.year));
+---
+
+<html lang="de">
+<head>
+    <BaseHead title={`Projekte - ${SITE_TITLE}`} description="Alle meine Webentwicklungsprojekte im Überblick" />
+</head>
+<body>
+    <Header />
+    <main class="projects-overview">
+        <div class="container">
+            <h1 class="page-title outlined-text">Alle Projekte</h1>
+            <p class="intro-text">
+                Eine Übersicht aller meiner Webentwicklungsprojekte mit detaillierten Einblicken in Technologien, 
+                Herausforderungen und Lösungsansätze.
+            </p>
+            
+            <div class="projects-grid">
+                {sortedProjects.map((project) => (
+                    <article class="project-card">
+                        <a href={`/projects/${project.slug}`} class="project-link">
+                            <div class="project-image-container">
+                                <img src={project.data.heroImage} alt={project.data.title} />
+                                <div class="project-overlay">
+                                    <span>Details ansehen</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-header">
+                                    <h2 class="project-title">{project.data.title}</h2>
+                                    <span class="project-year">{project.data.year}</span>
+                                </div>
+                                <p class="project-description">{project.data.description}</p>
+                                <div class="project-tags">
+                                    {project.data.tags.map((tag) => (
+                                        <span class="tag">{tag}</span>
+                                    ))}
+                                </div>
+                                <div class="project-links">
+                                    <span class="internal-link">Projekt ansehen →</span>
+                                    <a 
+                                        href={project.data.websiteUrl} 
+                                        target="_blank" 
+                                        class="external-link"
+                                        onclick="event.stopPropagation()"
+                                    >
+                                        Live Website ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                ))}
+            </div>
+
+            <div class="back-to-home">
+                <a href="/" class="back-link">← Zurück zur Startseite</a>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</body>
+
+<style>
+    .projects-overview {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .page-title {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        color: transparent;
+        font-weight: 600;
+        position: relative;
+        display: inline;
+        text-shadow: 
+            -1px -1px 0 var(--font),  
+            1px -1px 0 var(--font),
+            -1px 1px 0 var(--font),
+            1px 1px 0 var(--font);
+        transition: color 0.3s ease;
+    }
+
+    .page-title:hover {
+        color: white;
+        text-shadow: 
+            -5px -5px 0 var(--font),  
+            1px -1px 0 var(--font),
+            -1px 1px 0 var(--font),
+            1px 1px 0 var(--font);
+    }
+
+    .intro-text {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 3rem auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--font);
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .project-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .project-image-container {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+    }
+
+    .project-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-image-container img {
+        transform: scale(1.05);
+    }
+
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover .project-overlay {
+        opacity: 1;
+    }
+
+    .project-overlay span {
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border: 2px solid white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--font);
+        margin: 0;
+        flex: 1;
+        margin-right: 1rem;
+    }
+
+    .project-year {
+        background-color: var(--accent-background-2);
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .project-description {
+        color: var(--font);
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tag {
+        background-color: var(--accent-background);
+        color: var(--font);
+        padding: 0.25rem 0.75rem;
+        border-radius: 16px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .project-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        border-top: 1px solid var(--accent-background);
+    }
+
+    .internal-link {
+        color: var(--font);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .external-link {
+        color: var(--font);
+        text-decoration: none;
+        font-size: 0.9rem;
+        border: 1px solid var(--accent-background-2);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .external-link:hover {
+        background-color: var(--font);
+        color: white;
+        border-color: var(--font);
+    }
+
+    .back-to-home {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .back-link {
+        color: var(--font);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        border: 2px solid var(--accent-background-2);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+        background-color: var(--font);
+        color: white;
+        border-color: var(--font);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .page-title {
+            font-size: 2.5rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .project-header {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .project-title {
+            margin-right: 0;
+        }
+
+        .project-links {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .external-link {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .page-title {
+            font-size: 2rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+            min-width: auto;
+        }
+
+        .project-image-container {
+            height: 200px;
+        }
+    }
+</style>
+</html>
