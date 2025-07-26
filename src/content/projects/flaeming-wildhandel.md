@@ -1,10 +1,10 @@
 ---
 title: "FLÄMING WILDHANDEL"
-description: "E-Commerce Website für regionalen Wildhandel mit Online-Shop und Produktkatalog"
+description: "Webauftriff für einen Familienbetrieb in der Lebensmittelbranche. Bereitstellung aller wichtigen Informationen über Betrieb für Einzel- und großhandelskunden."
 heroImage: "/Wildhandel.png"
 websiteUrl: "https://www.flaeming-wildhandel.de/"
 year: "2023"
-tags: ["E-Commerce", "Lebensmittel", "Regional"]
+tags: ["Neuaufsetzung", "Designübernahme", "Performanceverbesserung", "Astro"]
 featured: true
 extraImage: "/Me.jpg"
 ---

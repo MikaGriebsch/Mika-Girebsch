@@ -69,8 +69,15 @@ const { title, description, heroImage, websiteUrl, year, tags, extraImage } = As
             </div>
 
             <!-- Back Navigation -->
-            <div class="back-navigation">
-                <a href="/#projects" class="back-link">← Zurück zu den Projekten</a>
+            <div class="back-to-home">
+                <a href="/projects">
+                    <button class="back-button">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Zurück zu den Projekten</span>
+                    </button>
+                </a>
             </div>
         </div>
     </main>
@@ -78,6 +85,131 @@ const { title, description, heroImage, websiteUrl, year, tags, extraImage } = As
 </body>
 
 <style>
+    .back-to-home {
+        text-align: center;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .back-to-home a {
+        text-decoration: none;
+    }
+    
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+    button.back-button {
+        width: 24rem;
+        height: auto;
+    }
+
+    button.back-button .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        margin-left: auto;
+        width: 3rem;
+        height: 3rem;
+        background: #000000;
+        border-radius: 1.625rem;
+    }
+
+    button.back-button .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+    }
+
+    button.back-button .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        right: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+
+    button.back-button .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        left: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-left: 0.125rem solid #fff;
+        transform: rotate(-45deg);
+    }
+
+    button.back-button .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 3.5rem;
+        bottom: 0;
+        margin: 0;
+        color: #282936;
+        font-weight: 700;
+        line-height: 1.6;
+        text-transform: uppercase;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button:hover .circle {
+        width: 100%;
+    }
+
+    button:hover .circle .icon.arrow {
+        background: #fff;
+        transform: translate(-1rem, 0);
+    }
+
+    button:hover .button-text {
+        color: #ffffff !important;
+    }
+    
+    a:hover button .button-text {
+        color: #ffffff !important;
+    }
+    
+    .back-to-home a:hover .button-text {
+        color: #ffffff !important;
+    }
+
+    .back-link {
+        color: var(--font);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        border: 2px solid var(--accent-background-2);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+        background-color: var(--font);
+        color: white;
+        border-color: var(--font);
+    }
     .project-detail {
         min-height: 100vh;
         padding: 2rem 0;
