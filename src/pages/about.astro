@@ -1,92 +1,22 @@
 ---
+import { getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '../layouts/BlogPost.astro';
+
+// Get the about-me content
+const aboutEntries = await getCollection('about');
+const aboutMe = aboutEntries.find(entry => entry.slug === 'about-me');
+
+if (!aboutMe) {
+  throw new Error('About me content not found');
+}
+
+const { Content } = await aboutMe.render();
 ---
 
 <Layout
-	title="Über Mika Griebsch"
-	description="Lerne mehr über meine Reise als Webentwickler - von den ersten Programmierzeilen bis zu professionellen Projekten."
-	pubDate={new Date('January 15 2025')}
-	heroImage="/Me.jpg"
+	title={aboutMe.data.title}
+	description={aboutMe.data.description}
+	heroImage={aboutMe.data.heroImage}
 >
-	<h1>Meine Reise als Webentwickler</h1>
-
-	<h2>Der Anfang einer Leidenschaft</h2>
-	<p>
-		Mit 13 Jahren entdeckte ich meine Faszination für die Programmierung. Was als Neugier begann, entwickelte sich schnell zu einer echten Leidenschaft. Meine ersten Schritte machte ich mit <strong>Java</strong> und <strong>Python</strong>, doch die Webentwicklung zog mich besonders in ihren Bann.
-	</p>
-
-	<h2>Lernen durch Praxis</h2>
-	<p>
-		Über zwei Jahre hinweg hatte ich das Privileg, ein Familienmitglied bei verschiedenen Webentwicklungsprojekten zu begleiten. Dabei arbeitete ich intensiv mit <strong>Django</strong> und sammelte wertvolle praktische Erfahrungen:
-	</p>
-
-	<h3>Frontend-Entwicklung</h3>
-	<ul>
-		<li>Responsive Design mit HTML5 und CSS3</li>
-		<li>JavaScript für interaktive Benutzeroberflächen</li>
-		<li>Moderne Frameworks und Libraries</li>
-	</ul>
-
-	<h3>Backend-Entwicklung</h3>
-	<ul>
-		<li>Datenbankdesign und -optimierung</li>
-		<li>API-Entwicklung und -integration</li>
-		<li>Server-Konfiguration und Deployment</li>
-	</ul>
-
-	<h2>Meine Entwicklungsphilosophie</h2>
-	<p>
-		Ich glaube an <strong>benutzerorientiertes Design</strong> und <strong>sauberen Code</strong>. Jedes Projekt beginnt mit dem Verständnis der Benutzerbedürfnisse und endet mit einer Lösung, die nicht nur funktional, sondern auch intuitiv und ästhetisch ansprechend ist.
-	</p>
-
-	<h3>Kernprinzipien:</h3>
-	<ul>
-		<li><strong>Performance</strong>: Schnelle Ladezeiten und optimierte Benutzererfahrung</li>
-		<li><strong>Zugänglichkeit</strong>: Websites, die für alle Nutzer zugänglich sind</li>
-		<li><strong>Skalierbarkeit</strong>: Lösungen, die mit den Anforderungen wachsen</li>
-		<li><strong>Wartbarkeit</strong>: Sauberer, dokumentierter Code für langfristige Projekte</li>
-	</ul>
-
-	<h2>Aktuelle Schwerpunkte</h2>
-	<p>
-		Heute konzentriere ich mich auf moderne Webtechnologien und Full-Stack-Entwicklung:
-	</p>
-
-	<h3>Frontend-Technologien</h3>
-	<ul>
-		<li><strong>Astro</strong> für performante, statische Websites</li>
-		<li><strong>React</strong> und <strong>Vue.js</strong> für dynamische Anwendungen</li>
-		<li><strong>TypeScript</strong> für typsichere Entwicklung</li>
-		<li><strong>Tailwind CSS</strong> für effizientes Styling</li>
-	</ul>
-
-	<h3>Backend & Tools</h3>
-	<ul>
-		<li><strong>Node.js</strong> und <strong>Express.js</strong></li>
-		<li><strong>Python</strong> mit Django und FastAPI</li>
-		<li><strong>PostgreSQL</strong> und <strong>MongoDB</strong></li>
-		<li><strong>Git</strong> und moderne DevOps-Praktiken</li>
-	</ul>
-
-	<h2>Vision und Ziele</h2>
-	<p>
-		Mein Ziel ist es, Websites und Anwendungen zu entwickeln, die nicht nur technisch exzellent sind, sondern auch echten Mehrwert für Nutzer und Unternehmen schaffen. Ich glaube daran, dass gute Technologie unsichtbar sein sollte – sie sollte einfach funktionieren und das Leben der Menschen verbessern.
-	</p>
-
-	<h3>Zukunftspläne:</h3>
-	<ul>
-		<li>Vertiefung in <strong>KI und Machine Learning</strong> Technologien</li>
-		<li>Spezialisierung auf <strong>Performance-Optimierung</strong></li>
-		<li>Entwicklung von <strong>Open-Source-Projekten</strong></li>
-		<li>Mentoring für angehende Entwickler</li>
-	</ul>
-
-	<h2>Persönliches</h2>
-	<p>
-		Wenn ich nicht programmiere, beschäftige ich mich gerne mit neuen Technologien, lese Fachliteratur oder arbeite an persönlichen Projekten. Ich bin überzeugt davon, dass kontinuierliches Lernen der Schlüssel zum Erfolg in der sich schnell verändernden Welt der Technologie ist.
-	</p>
-
-	<hr>
-
-	<p><em>Interessiert an einer Zusammenarbeit? <a href="/contact">Kontaktiere mich</a> und lass uns über dein nächstes Projekt sprechen!</em></p>
+	<Content />
 </Layout>
