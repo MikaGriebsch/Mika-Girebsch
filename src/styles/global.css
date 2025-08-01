@@ -35,11 +35,11 @@ body {
     color: rgb(var(--gray-dark));
     font-size: 20px;
     line-height: 1.7;
-    cursor: url('/cursor.png') 32 32, auto; /* 32 32 ist der Hotspot des Cursors */
+    cursor: url('/cursor.png') 16 16, auto; /* 16 16 zentriert den Hotspot */
 }
 
 .custem-cursor {
-    cursor: url('/cursor.png') 32 32, auto; /* 32 32 ist der Hotspot des Cursors */
+    cursor: url('/cursor.png') 16 16, auto; /* 16 16 zentriert den Hotspot */
 }
 
 main {
