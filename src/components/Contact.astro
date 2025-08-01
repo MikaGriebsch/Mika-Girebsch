@@ -1,56 +1,32 @@
 <main class="contact-container-main" id="contact">
     <h1 class="container-header outlined-text-active">Mika Griebsch</h1>
     <div class="contact-container">
-        <div class="left">
-            <a target="_blank" href="https://www.strava.com/athletes/103508371" >
-                <img class="element-1" src="/strava-icon.svg">
-            </a>
-            <a target="_blank" href="https://github.com/MikaGriebsch" >
-                <img class="element-2" src="/github.svg">
-            </a>
-        </div>
         <div class="middel">
             <table>
                 <tr>
-                    <!-- <td class="td-img">
-                        <img src="/public/home.svg">
-                    </td> -->
                     <td>
                         <p>Bardenitzer Drofstr. 56,</p>
                         <p>14929 Treuenbrietzen</p>
                     </td>
                 </tr>
                 <tr>
-                    <!-- <td class="td-img">
-                        <img src="/public/at.svg"> 
-                    </td> -->
                     <td>
-                        <p>mika.griebsch@gmail.com</p>
+                        <a href="mailto:mika.griebsch@gmail.com">
+                            <p>mika.griebsch@gmail.com</p>
+                        </a>
                     </td>
                 </tr>
                 <tr>
-                    <!-- <td class="td-img">
-                        <img src="/public/phone.svg">
-                    </td> -->
                     <td>
-                        <p>+49 123-456789</p>
+                        <a href="tel:+4915252873263">
+                            <p>+49 1525 2873263</p>
+                        </a>
                     </td>
                 </tr>
             </table>
         </div>
-        <div class="right">
-            <a target="_blank" href="https://www.linkedin.com/in/mika-griebsch-4a31a7328/">
-                <img class="element-3" src="/linkedin.svg">
-            </a>
-            <a target="_blank" href="https://www.instagram.com/mika_griebsch/">
-                <img class="element-4" src="/instagram.svg">
-            </a>
-        </div>
     </div>
 </main>
-<div class="more ">
-    <h2 class="container-header outlined-text" >more, coming soon</h2>
-</div>
 
 <style>
     .more {
@@ -60,26 +36,12 @@
     }
     .contact-container {
         display: flex;
-        flex-direction: row;
-    }
-    .left, .right {
-        width: 30%;
-        position: relative;
-        /* background-color: aqua; */
-    }
-    .left img, .right img {
-        width: 70px;
-        height: auto;
-    }
-    @keyframes grow {
-        100% {
-            width: 90px;
-            height: 90px;
-        }
+        justify-content: center;
     }
     .middel {
-        width: 40%;
+        width: 100%;
         height: fit-content;
+        max-width: 600px;
     }
     table td {
         vertical-align: middle;
@@ -90,6 +52,17 @@
         margin: 0;
         padding: 0;
     }
+    table td a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+    table td a:hover {
+        color: var(--accent);
+    }
+    table td a:hover p {
+        color: var(--accent);
+    }
     table td img {
         height: 30px;
         padding-top: 10px;
@@ -99,92 +72,6 @@
         text-align: center;
         width: 50px;
     }
-    @keyframes moving1 {
-        0% {
-            transform: translate(0, 0);
-            height: 70px;
-            width: auto;
-        }
-        25% {
-            transform: translate(-5px, -5px);
-            height: 85px;
-            width: auto;
-        }
-        50% {
-            transform: translate(10px, 5px);
-            height: 60px;
-            width: auto;
-        }
-        75% {
-            transform: translate(-5px, 5px);
-            height: 85px;
-            width: auto;
-        }
-        100% {
-            transform: translate(0px, 0px);
-            height: 70px;
-            width: auto;
-        }
-    }
-    @keyframes moving2 {
-        0% {
-            transform: translate(0, 0);
-        }
-        25% {
-            transform: translate(5px, 5px);
-        }
-        50% {
-            transform: translate(-5px, -10px);
-        }
-        75% {
-            transform: translate(5px, -5px);
-        }
-        100% {
-            transform: translate(0px, 0px);
-        }
-    }
-    @keyframes moving3 {
-        0% {
-            transform: translate(0, 0);
-        }
-        25% {
-            transform: translate(15px, 5px);
-        }
-        50% {
-            transform: translate(-5px, -10px);
-        }
-        75% {
-            transform: translate(5px, -10px);
-        }
-        100% {
-            transform: translate(0px, 0px);
-        }
-    }
-    .element-1 {
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        animation: moving1 5s ease-in-out infinite;
-    }
-    .element-2 {
-        position: absolute;
-        top: 60%;
-        left: 20%;
-        animation: moving2 5s ease-in-out infinite;
-    }
-    .element-3 {
-        position: absolute;
-        top: 20%;
-        left: 60%;
-        animation: moving3 5s ease-in-out infinite;
-        animation-delay: 1s;
-    }
-    .element-4 {
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        animation: moving1 5s ease-in-out infinite;
-    }
     .container-header {
         display: flex;
         justify-content: center;
@@ -193,15 +80,15 @@
         opacity: 0; 
         transition: opacity 0.5s ease-out; 
         padding-top: 20%;
-        padding-bottom: 20%;
+        padding-bottom: 10%;
     }
     .contact-container-main.visible {
         opacity: 1; 
     }
     @media (max-width: 720px) {
         .contact-container {
-        display: flex;
-        flex-direction: column;
+            display: flex;
+            flex-direction: column;
         }
         .middel {
             padding-top: 50px;
@@ -214,23 +101,6 @@
         table tr {
             display: table-row; 
         }
-        .left, .right {
-            width: 100%;
-            height: 200px;
-        }
-        .element-1 {
-        animation: moving1 5s ease-in-out infinite;
-        }
-        .element-2 {
-            animation: moving2 5s ease-in-out infinite;
-        }
-        .element-3 {
-            animation: moving3 5s ease-in-out infinite;
-            animation-delay: 1s;
-        }
-        .element-4 {
-            animation: moving1 5s ease-in-out infinite;
-        }
     }
 </style>
 
@@ -238,18 +108,20 @@
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.querySelector('.contact-container-main');
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    container.classList.add('visible');
-                } else {
-                    container.classList.remove('visible');
-                }
+        if (container) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        container.classList.add('visible');
+                    } else {
+                        container.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.7
             });
-        }, {
-            threshold: 0.7
-        });
 
-        observer.observe(container);
+            observer.observe(container);
+        }
     });
 </script>
