@@ -1,83 +1,558 @@
-<main id="about" >
-    <div class="container hidden">
-        <h1 class="container-header outlined-text-active" >ABOUT</h1>
-        <div class="row">
-            <div class="left">
-                Früh interessierte ich mich für die Programmierung und entdeckte anfangs verschiedenste Programmiersprachen wie Java und Python.
-                Durch mein damaliges alter von 13 Jahren interessierte ich mich aber besonders für die Webentwicklung.<br>
-                Über zwei Jahre hinweg habe ich ein Familienmitglied bei der Webentwicklung begleitet 
-                und mit Django gearbeitet. In dieser Zeit übernahm ich kleinere Aufgaben eigenständig
-                und sammelte praktische Erfahrungen im Frontend- und Backend-Bereich. Die enge 
-                Zusammenarbeit half mir, mein technisches Verständnis und meine Fähigkeiten 
-                in der Webentwicklung zu vertiefen.<br>
-                Mit fortschreitendem Alter erweiterten sich die Projekte bis hin zu fertigen Websites.<br>
+<section id="about" class="about-section">
+    <div class="about-container">
+        <!-- Header Section
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="container-header outlined-text-active">Über mich</h2>
+            <div class="title-underline"></div>
+        </div> -->
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Text Content -->
+            <div class="text-content">
+                <div class="intro-text">
+                    <h3>Vom Hobby zur Leidenschaft</h3>
+                    <p class="lead-text">
+                        Meine Reise in die Welt der Programmierung begann früh - mit 13 Jahren entdeckte ich meine Faszination für Code und digitale Welten.
+                    </p>
+                </div>
+
+                <div class="story-blocks">
+                    <div class="story-block">
+                        <div class="block-icon"><img src="/icons8-rocket-50 (2).png" alt="Icon 1"></div>
+                        <div class="block-content">
+                            <h4>Der Anfang</h4>
+                            <p>Erste Schritte mit Java und Python weckten mein Interesse für die Programmierung. Die Webentwicklung wurde schnell zu meiner Leidenschaft.</p>
+                        </div>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="block-icon"><img src="/icons8-learn-50 (1).png" alt="Icon 1"></div>
+                        <div class="block-content">
+                            <h4>Lernen durch Praxis</h4>
+                            <p>Über zwei Jahre begleitete ich ein Familienmitglied bei Django-Projekten und übernahm eigenständig Frontend- und Backend-Aufgaben.</p>
+                        </div>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="block-icon"><img src="/icons8-developing-64 (1).png" alt="Icon 1"></div>
+                        <div class="block-content">
+                            <h4>Professionelle Projekte</h4>
+                            <p>Heute entwickle ich vollständige Websites und komplexe Webanwendungen - von der Konzeption bis zur finalen Umsetzung.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="right">
-                <img src="/Me.jpg" alt="Portrait">
+            
+            <!-- Image Section -->
+            <div class="image-section">
+                <div class="image-wrapper">
+                    <img src="/Me.jpg" alt="Mika Griebsch - Web Developer" class="profile-image">
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <span class="overlay-text">Web Developer</span>
+                            <span class="overlay-location">Deutschland</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-section">
+                    <a href="/about">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">mehr über mich</span>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</main>
+</section>
 
 <style>
-    .container {
-        display: flex;
-        flex-direction: column;
-        opacity: 0; 
-        transition: opacity 0.5s ease-out;
-    }
-    @media (max-width: 1100px) {
-        .container {
-            margin-top: 30px;
-        }
-        .row {
-            display: flex;
-            flex-direction: column !important;
-        }
-        .left, .right {
-            width: 100% !important;
-        }
-    }
-    .container.visible {
-        opacity: 1; /* Sichtbar, wenn die Klasse hinzugefügt wird */
-    }
-    .row {
-        display: flex;
-        flex-direction: row;
+/* About Section Styling */
+.about-section {
+    padding: 8rem 0;
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Instrument Sans', sans-serif;
+}
 
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.section-number {
+    display: inline-block;
+    font-family: 'Instrument Sans', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--font);
+    background: var(--accent-background);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: transparent;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    text-shadow: 
+        -1px -1px 0 var(--font),  
+        1px -1px 0 var(--font),
+        -1px 1px 0 var(--font),
+        1px 1px 0 var(--font);
+    transition: color 0.3s ease;
+}
+
+.section-title:hover {
+    color: white;
+    text-shadow: 
+        -5px -5px 0 var(--font),  
+        1px -1px 0 var(--font),
+        -1px 1px 0 var(--font),
+        1px 1px 0 var(--font);
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background: var(--font);
+    margin: 1.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 6rem;
+    align-items: start;
+}
+
+/* Text Content */
+.text-content {
+    max-width: 100%;
+}
+
+.intro-text {
+    margin-bottom: 3rem;
+}
+
+.intro-text h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: transparent;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-family: 'Instrument Sans', sans-serif;
+    text-shadow: 
+        -1px -1px 0 var(--font),  
+        1px -1px 0 var(--font),
+        -1px 1px 0 var(--font),
+        1px 1px 0 var(--font);
+    transition: color 0.3s ease;
+}
+
+.intro-text h3:hover {
+    color: white;
+    text-shadow: 
+        -3px -3px 0 var(--font),  
+        1px -1px 0 var(--font),
+        -1px 1px 0 var(--font),
+        1px 1px 0 var(--font);
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: rgb(var(--gray-dark));
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+/* Story Blocks */
+.story-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.story-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--accent-background);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(15, 18, 25, 0.1);
+}
+
+.story-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: var(--font);
+}
+
+
+.block-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--font);
+    border-radius: 12px;
+    flex-shrink: 0;
+    color: white;
+    margin: 0.5rem;
+}
+
+.block-icon img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.block-content h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: 'Instrument Sans', sans-serif;
+    color: var(--font);
+}
+
+.block-content p {
+    color: rgb(var(--gray-dark));
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cta-section a {
+    text-decoration: none;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 15rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #000000;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: var(--font);
+    font-weight: 700;
+    line-height: 1.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #ffffff !important;
+}
+
+a:hover button .button-text {
+    color: #ffffff !important;
+}
+
+/* Image Section */
+.image-section {
+    position: relative;
+    padding-bottom: 3rem;
+    margin-top: 12rem;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    height: 28rem;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover .profile-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 2rem;
+    color: white;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.overlay-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.overlay-location {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
-    .left, .right {
-        padding-left: 0vw;
-        padding-right: 2vw;
-        padding-bottom: 2vw;
-        padding-top: 2vw;
+    
+    .image-section {
+        order: -1;
+        margin-top: 0;
     }
-    .left {
-        text-align: justify;
-        width: 60%;
-        height: fit-content;
+    
+    .image-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+        border-radius: 0;
+        box-shadow: none;
+        overflow: visible;
     }
-    .right {
-        width: 40%;
-        overflow: hidden;
+    
+    .image-overlay {
+        display: none;
     }
-    .right img {
-        width: 100%; /* Setzt die Breite auf 100% des Container-Bereichs */
-        height: auto; /* Beibehaltung der Bildhöhe entsprechend der Breite */
+    
+    .profile-image {
+        border-radius: 20px;
     }
-    @keyframes fade-in {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
+    
+    .cta-section {
+        margin-top: 3rem;
     }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 4rem 0;
+    }
+    
+    .about-container {
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .content-grid {
+        gap: 3rem;
+    }
+    
+    .image-section {
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .cta-section {
+        margin-top: 1rem;
+    }
+    
+    .story-block {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .block-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .intro-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .profile-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .story-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .block-icon {
+        margin: 0 auto;
+    }
+}
+
+/* Animation */
+.about-section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Intersection Observer Animation */
+.about-container {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(40px);
+}
+
+.about-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const container = document.querySelector('.container');
+        const container = document.querySelector('.about-container');
+        
+        if (!container) return;
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -88,7 +563,8 @@
                 }
             });
         }, {
-            threshold: 0.5 
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
         });
 
         observer.observe(container);
