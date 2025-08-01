@@ -1,144 +1,86 @@
 ---
-title: "FLÄMING WILDHANDEL"
-description: "Webauftriff für einen Familienbetrieb in der Lebensmittelbranche. Bereitstellung aller wichtigen Informationen über Betrieb für Einzel- und großhandelskunden."
-heroImage: "/Wildhandel.png"
-websiteUrl: "https://www.flaeming-wildhandel.de/"
-year: "2023"
+title: "PRAXIS-MONITOR"
+description: "Mit dem PraxisMonitor‑System werden Patientinnen und Patienten im Wartebereich digital aufgerufen, während auf Displays informative Bilder und Videos angezeigt werden."
+heroImage: "/Praxis1.png"
+websiteUrl: "https://github.com/MikaGriebsch/PraxisMonitor"
+year: "2025"
 tags: ["Automatisierung", "Performanceverbesserung", "Django"]
 featured: true
-extraImage: "/Me.jpg"
+extraImage: "/Praxis2.png"
 ---
 
-# Fläming Wildhandel - E-Commerce Platform
+## Praxis-Monitor
 
-## Projektübersicht
+<br>
 
-Die Website für Fläming Wildhandel repräsentiert eine vollständige E-Commerce-Lösung für einen regionalen Wildhandel. Das Projekt verbindet traditionelle Jagd- und Wildkultur mit modernem Online-Handel. Der familiengeführte Betrieb existiert bereits seit 30 Jahren und ist mehrfach von der Fachzeitschrift "Der Feinschmecker" ausgezeichnet worden.
+### Projektübersicht
 
-## Geschäftsfelder & Zielgruppen
+**Praxis-Monitor** ist eine webbasierte Lösung zur Digitalisierung des Patientenaufrufs im Wartezimmer. Das System zeigt vom Team gewünschte Informationen, wie z.B. Wartezimmer-Nr. in Kombination mit dem Namen der Patient:innen an und dient zugleich als Infotainment-Plattform via Monitor mit Bildern und Videos. Ziel ist die Minimierung manuellen Aufwands bei gleichzeitiger Steigerung der Patientenkommunikation.
 
-### Hofladen
-Direktverkauf im rustikalen Ambiente eines Vierseithofes:
-- **Fachberatung**: Persönliche Beratung für Profi- und Hobbyköche
-- **Frischesortiment**: Küchenfertiges Wildbret aus eigener Produktion
-- **Tiefkühlprodukte**: Lange haltbare Wildspezialitäten
-- **Zusatzsortiment**: Pikante Wildwurst und frische Schinken
-- **Öffnungszeiten**: 
-  - Montag-Freitag: 8-17 Uhr
-  - Samstag: 9-12 Uhr
-  - Sonntag: 9-11 Uhr
+<br>
 
-### Gastronomie-Belieferung
-Professioneller Service für die gehobene Gastronomie:
-- **Zielgruppe**: Vom Landgasthof bis zur Sterneküche
-- **Qualitätsmerkmale**: Saubere Zuschnitte und garantierte Frische
-- **Service**: Fachkundige Beratung und termingerechte Lieferung
-- **Erfahrung**: Über zwei Jahrzehnte Gastronomie-Expertise
+---  
+<br>
 
-### Großhandel
-Industrielle Belieferung unter EU-Standards:
-- **Produktionsstandards**: Moderne Bedingungen nach EU-Richtlinien
-- **Qualitätssicherung**: Gleichbleibend hohe Qualität im Frische- und Tiefkühlbereich
-- **Expertise**: Fachkompetenz in Aufkauf, Zerlegung und Lieferung
-- **Wildarten**: Reh, Dam-, Rotwild und Wildschwein
+### Technische Umsetzung
 
-### Jägerservice
-Ganzjähriger Ankauf von Wildtieren:
-- **Verfügbarkeit**: Sieben Tage die Woche
-- **Partnernetzwerk**: Kooperation mit regionalen Jägern
-- **Wildbahnqualität**: Frisches Wild aus freier Wildbahn
+- **Backend**:
+  - **Django Framework** auf Python‑Basis, inklusive Benutzerverwaltung
+  - **Accountrollen**: Administratoren (z. B. Praxispersonal) und Display-Modus ohne Login  
+  - **REST API** zur Steuerung der Aufrufsteuerung und der Content-Verwaltung
 
-## Produktsortiment
+- **Datenbank**:
+  - Relationale DB - SQLite
 
-### Hauptsortiment
-- **Rehrücken**: Edle Fleischstücke für die gehobene Küche
-- **Wildgulasch**: Küchenfertig zubereitete Portionen
-- **Wildschweinfleisch**: Verschiedene Teilstücke und Zubereitungen
-- **Damwild**: Delikate Fleischqualität aus regionaler Jagd
-- **Rotwild**: Premium-Wildfleisch für Feinschmecker
+- **Admin-Oberfläche**:
+  - Dashboard zum Verwalten von Patientenaufrufen, Logik zur Nummerngenerierung, Upload von Medien (Bilder/Videos)  
+  - Konfigurationsoptionen für Anzeigefrequenz, Loop-Settings und Slide-Inhalte
 
-### Verarbeitete Produkte
-- **Wildwurst**: Pikante Spezialitäten nach traditionellen Rezepten
-- **Wildschinken**: Geräucherte Delikatessen
-- **Küchenfertiges Wildbret**: Portionierte, bratfertige Stücke
+- **Display-Modus (Frontend)**:
+  - Vollbild-Web-App im Display-Betrieb, ohne Login, auf Touch-Displays oder TV‑Screens
+  - HTML5 + CSS + JavaScript für bestmögliche Performance und Browser-Kompatibilität
 
-## Technische Features
+<br>
 
-### E-Commerce-Funktionalität
-- **Online-Katalog**: Übersichtliche Produktdarstellung mit hochwertigen Bildern
-- **Produktinformationen**: Detaillierte Beschreibungen und Zubereitungstipps
-- **Saisonale Verfügbarkeit**: Berücksichtigung natürlicher Jagdzeiten
-- **Frische-Garantie**: Transparente Informationen zur Haltbarkeit
+---  
+<br>
 
-### Regionale Authentizität
-Das Design spiegelt die Verbundenheit zur Region und zur traditionellen Jagd wider:
+### UX & Design
 
-- **Natürliche Farbpalette**: Erdtöne und Waldgrün vermitteln Naturverbundenheit
-- **Hochwertige Produktfotos**: Professionelle Darstellung der Wildprodukte in natürlicher Umgebung
-- **Storytelling**: Geschichte und Tradition des Familienbetriebs im Fläming
-- **Rustikales Design**: Hofladen-Atmosphäre auch online erlebbar
+- **Einfaches Benutzerinterface** für das Praxispersonal zur Verwaltung interaktiver Inhalte  
+- **Patientenansicht im Wartezimmer**:
+  - Großdarstellung des Patienten und der Raumnummer
+  - Automatische Medienrotation (Bilder & Videos)
+  - Übersichtlich, kontrastreich und auch bei größeren Displays gut lesbar
 
-## Regionale Vernetzung & Nachhaltigkeit
+<br>
 
-### "Offene Höfe" Projekt
-Teilnahme am regionalen Netzwerk:
-- **Kooperationsgedanke**: "Gemeinsam, miteinander, füreinander"
-- **Partnernetzwerk**: Anbauer, Erzeuger, Verarbeiter bis Gastronomie
-- **Lokale Wertschöpfung**: Stärkung der regionalen Wirtschaft
+---  
+<br>
 
-### "Echt Fläming" Regionalmarke
-Zertifizierte Regionalmarke für höchste Qualitätsstandards:
-- **Zusammenarbeit**: Landwirte, Produzenten, Gastronomen und Händler
-- **Regionalförderung**: Unterstützung der Fläming-Region
-- **Qualitätssiegel**: Garantie für regionale Herkunft und Qualität
+### Inhalte & Informationsfluss
 
-## Besondere Herausforderungen
+- **Aufrufdatum/-zeit & Nummernvergabe**: automatische oder manuelle Zuweisung  
+- **Medienverwaltung**: Bild- und Videocontent über Adminbereich steuerbar  
+- **Playlist-Funktion**: Reihenfolge und Dauer von Slides im Zeitplan  
 
-### Lebensmittelsicherheit & Compliance
-Umfassende rechtliche Anforderungen für den Online-Verkauf von Wildfleisch:
-- **EU-Standards**: Moderne Produktionsbedingungen nach europäischen Richtlinien
-- **HACCP-Konzept**: Hygiene- und Qualitätssicherung in der gesamten Kette
-- **DSGVO-konforme Datenverarbeitung**: Sichere Kundendatenverarbeitung
-- **Lebensmittelinformationsverordnung**: Vollständige Produktkennzeichnung
-- **Kühlkettenlogistik**: Lückenlose Kühlung vom Produzenten bis zum Kunden
+<br>
 
-### Saisonale Verfügbarkeit
-Berücksichtigung natürlicher Jagdzyklen:
-- **Jagdzeiten**: Gesetzliche Schonzeiten verschiedener Wildarten
-- **Bestandsmanagement**: Nachhaltige Jagd und Wildbestandspflege
-- **Verfügbarkeitsplanung**: Vorausschauende Lagerung für ganzjährige Belieferung
+---  
+<br>
 
-### Traditionelles Handwerk trifft Digitalisierung
-- **Familienbetrieb-Charakter**: Bewahrung traditioneller Werte im digitalen Zeitalter
-- **Handwerkskunst**: 30 Jahre Erfahrung in der Wildverarbeitung
-- **Moderne Präsentation**: Zeitgemäße Darstellung traditioneller Produkte
+### Technologiestack & Deployment
 
-## Standort & Erreichbarkeit
+- **Backend**: Python 3.13.2, Django
+- **Datenbank**: SQLite
+- **Frontend Admin**: Django Admin oder individualisierte Templates (HTML/CSS/JS)  
+- **Display-Frontend**: Standalone HTML5‑Anwendung im Loopmodus 
 
-**Fläming-Wildhandel**
-- **Inhaber**: Jan Griebsch
-- **Adresse**: Bardenitzer Dorfstr. 56, 14929 Treuenbrietzen
-- **Kontakt**: 
-  - Tel.: 033 748 / 155 97
-  - Fax: 033 748 / 219 30
-  - E-Mail: info@flaeming-wildhandel.de
-- **Social Media**: Instagram @flaeming_wildhandel
+<br>
 
-## Technischer Stack & Performance
+---  
+<br>
 
-- **Frontend**: Moderne JavaScript-Frameworks für responsive Darstellung
-- **Backend**: Robuste Server-Architektur für E-Commerce-Anforderungen
-- **Datenbank**: Optimiert für komplexe Produktverwaltung und Lagerbestände
-- **Security**: SSL-Verschlüsselung und sichere Zahlungsabwicklung
-- **Performance**: Schnelle Ladezeiten auch bei hochauflösenden Produktbildern
+### Fazit
 
-## Erfolg & Impact
-
-Die Website hat dem regionalen Wildhandel entscheidend geholfen:
-- **Reichweitenerweiterung**: Kundenstamm über regionale Grenzen hinaus erweitert
-- **Pandemie-Resilience**: Kontinuierliche Umsätze auch während Lockdown-Phasen
-- **Kundenzufriedenheit**: Hohe Bewertungen für Benutzerfreundlichkeit und Produktqualität
-- **Markenbildung**: Stärkung der regionalen Marke "Fläming Wildhandel"
-- **Nachhaltigkeit**: Förderung regionaler Kreisläufe und nachhaltiger Jagd
-
-Die Kombination aus traditionellem Handwerk, moderner Technologie und regionalem Bewusstsein macht diese E-Commerce-Lösung zu einem herausragenden Beispiel für erfolgreiche Digitalisierung im Lebensmittelhandwerk.
+Der **PraxisMonitor** bietet eine effektive und modulare Lösung für Arztpraxen: Automatisierung beim Patientenaufruf trifft auf gezielte Informationspräsentation. Technisch solide, performant konzipiert und einfach zu bedienen – ideal für moderne Praxen, die Effizienz und Patientenbindung verbessern wollen.

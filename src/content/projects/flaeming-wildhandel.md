@@ -1,144 +1,87 @@
 ---
 title: "FLÄMING WILDHANDEL"
-description: "Webauftriff für einen Familienbetrieb in der Lebensmittelbranche. Bereitstellung aller wichtigen Informationen über Betrieb für Einzel- und großhandelskunden."
+description: "Digitale Präsenz für einen regionalen Familienbetrieb – Fokus auf Performance, Barrierefreiheit und vertrauenswürdige UX für Informations- und Kontaktzwecke."
 heroImage: "/Wildhandel.png"
 websiteUrl: "https://www.flaeming-wildhandel.de/"
 year: "2023"
-tags: ["Neuaufsetzung", "Designübernahme", "Performanceverbesserung", "Astro"]
+tags: ["Webentwicklung", "Neuentwicklung", "Astro"]
 featured: true
-extraImage: "/Me.jpg"
+extraImage: "/Schwein.jpeg"
 ---
 
-# Fläming Wildhandel - E-Commerce Platform
+## Fläming Wildhandel – Jan Griebsch
 
-## Projektübersicht
+<br>
 
-Die Website für Fläming Wildhandel repräsentiert eine vollständige E-Commerce-Lösung für einen regionalen Wildhandel. Das Projekt verbindet traditionelle Jagd- und Wildkultur mit modernem Online-Handel. Der familiengeführte Betrieb existiert bereits seit 30 Jahren und ist mehrfach von der Fachzeitschrift "Der Feinschmecker" ausgezeichnet worden.
+### Projektübersicht
 
-## Geschäftsfelder & Zielgruppen
+Für den traditionsreichen Betrieb **Fläming Wildhandel** wurde eine moderne Website konzipiert und entwickelt. Ziel war es, die handwerkliche Qualität und regionale Identität des Unternehmens digital widerzuspiegeln – mit einer klar strukturierten, performanten und wartungsarmen Plattform. Der Fokus lag auf der professionellen Präsentation von Angebot, Betrieb und Kontaktmöglichkeiten.
 
-### Hofladen
-Direktverkauf im rustikalen Ambiente eines Vierseithofes:
-- **Fachberatung**: Persönliche Beratung für Profi- und Hobbyköche
-- **Frischesortiment**: Küchenfertiges Wildbret aus eigener Produktion
-- **Tiefkühlprodukte**: Lange haltbare Wildspezialitäten
-- **Zusatzsortiment**: Pikante Wildwurst und frische Schinken
-- **Öffnungszeiten**: 
-  - Montag-Freitag: 8-17 Uhr
-  - Samstag: 9-12 Uhr
-  - Sonntag: 9-11 Uhr
+<br>
 
-### Gastronomie-Belieferung
-Professioneller Service für die gehobene Gastronomie:
-- **Zielgruppe**: Vom Landgasthof bis zur Sterneküche
-- **Qualitätsmerkmale**: Saubere Zuschnitte und garantierte Frische
-- **Service**: Fachkundige Beratung und termingerechte Lieferung
-- **Erfahrung**: Über zwei Jahrzehnte Gastronomie-Expertise
+--- 
+<br>
 
-### Großhandel
-Industrielle Belieferung unter EU-Standards:
-- **Produktionsstandards**: Moderne Bedingungen nach EU-Richtlinien
-- **Qualitätssicherung**: Gleichbleibend hohe Qualität im Frische- und Tiefkühlbereich
-- **Expertise**: Fachkompetenz in Aufkauf, Zerlegung und Lieferung
-- **Wildarten**: Reh, Dam-, Rotwild und Wildschwein
+### Technische Umsetzung
 
-### Jägerservice
-Ganzjähriger Ankauf von Wildtieren:
-- **Verfügbarkeit**: Sieben Tage die Woche
-- **Partnernetzwerk**: Kooperation mit regionalen Jägern
-- **Wildbahnqualität**: Frisches Wild aus freier Wildbahn
+Die Website wurde unter Berücksichtigung aktueller Webstandards und langfristiger Wartbarkeit umgesetzt:
 
-## Produktsortiment
+- **Astro Framework**: Schnelle statische Seiten mit minimalem Overhead
+- **Barrierefreiheit**: Fokus auf Kontraste, Tastaturbedienbarkeit und semantisches HTML
+- **Responsive Design**: Optimale Darstellung für Desktop, Tablet und Smartphone
+- **Suchmaschinenfreundlich**: Technische SEO durch saubere Struktur und Metadaten
 
-### Hauptsortiment
-- **Rehrücken**: Edle Fleischstücke für die gehobene Küche
-- **Wildgulasch**: Küchenfertig zubereitete Portionen
-- **Wildschweinfleisch**: Verschiedene Teilstücke und Zubereitungen
-- **Damwild**: Delikate Fleischqualität aus regionaler Jagd
-- **Rotwild**: Premium-Wildfleisch für Feinschmecker
+<br>
 
-### Verarbeitete Produkte
-- **Wildwurst**: Pikante Spezialitäten nach traditionellen Rezepten
-- **Wildschinken**: Geräucherte Delikatessen
-- **Küchenfertiges Wildbret**: Portionierte, bratfertige Stücke
+--- 
+<br>
 
-## Technische Features
+### UX & Designprinzipien
 
-### E-Commerce-Funktionalität
-- **Online-Katalog**: Übersichtliche Produktdarstellung mit hochwertigen Bildern
-- **Produktinformationen**: Detaillierte Beschreibungen und Zubereitungstipps
-- **Saisonale Verfügbarkeit**: Berücksichtigung natürlicher Jagdzeiten
-- **Frische-Garantie**: Transparente Informationen zur Haltbarkeit
+Die Gestaltung orientierte sich an den Werten des Betriebs: Regionalität, Qualität und Transparenz.
 
-### Regionale Authentizität
-Das Design spiegelt die Verbundenheit zur Region und zur traditionellen Jagd wider:
+- **Klarer Seitenaufbau**: Klare Navigation mit Ankerpunkten für schnelle Orientierung
+- **Visuelle Authentizität**: Natürliche Farbgebung, echte Bilder vom Hof und Produkten
+- **Vertrauensfördernde Inhalte**: Persönliche Vorstellung des Betriebs, Ansprechpartner, Philosophie
+- **Zielgruppenfreundlich**: Strukturierte Inhalte für Endkunden, Gastronomie und Jäger
 
-- **Natürliche Farbpalette**: Erdtöne und Waldgrün vermitteln Naturverbundenheit
-- **Hochwertige Produktfotos**: Professionelle Darstellung der Wildprodukte in natürlicher Umgebung
-- **Storytelling**: Geschichte und Tradition des Familienbetriebs im Fläming
-- **Rustikales Design**: Hofladen-Atmosphäre auch online erlebbar
+<br>
 
-## Regionale Vernetzung & Nachhaltigkeit
+--- 
+<br>
 
-### "Offene Höfe" Projekt
-Teilnahme am regionalen Netzwerk:
-- **Kooperationsgedanke**: "Gemeinsam, miteinander, füreinander"
-- **Partnernetzwerk**: Anbauer, Erzeuger, Verarbeiter bis Gastronomie
-- **Lokale Wertschöpfung**: Stärkung der regionalen Wirtschaft
+### Inhalte & Struktur
 
-### "Echt Fläming" Regionalmarke
-Zertifizierte Regionalmarke für höchste Qualitätsstandards:
-- **Zusammenarbeit**: Landwirte, Produzenten, Gastronomen und Händler
-- **Regionalförderung**: Unterstützung der Fläming-Region
-- **Qualitätssiegel**: Garantie für regionale Herkunft und Qualität
+Die Informationsarchitektur wurde neu geplant und logisch gegliedert:
 
-## Besondere Herausforderungen
+- **Startseite mit Überblick**: Alle Geschäftsbereiche auf einen Blick
+- **Detailseiten für Angebote**: Hofladen, Gastronomiebelieferung, Großhandel, Jägerservice
+- **Produktübersicht**: Informationen zum Sortiment, den Produkten und den Inhalten
+- **Kontakt- & Standortseite**: Integration von Google Maps, Öffnungszeiten und Kontaktdaten
+- **Regionale Vernetzung**: Darstellung von Kooperationen wie „Echt Fläming“ oder „Offene Höfe“
 
-### Lebensmittelsicherheit & Compliance
-Umfassende rechtliche Anforderungen für den Online-Verkauf von Wildfleisch:
-- **EU-Standards**: Moderne Produktionsbedingungen nach europäischen Richtlinien
-- **HACCP-Konzept**: Hygiene- und Qualitätssicherung in der gesamten Kette
-- **DSGVO-konforme Datenverarbeitung**: Sichere Kundendatenverarbeitung
-- **Lebensmittelinformationsverordnung**: Vollständige Produktkennzeichnung
-- **Kühlkettenlogistik**: Lückenlose Kühlung vom Produzenten bis zum Kunden
+<br>
 
-### Saisonale Verfügbarkeit
-Berücksichtigung natürlicher Jagdzyklen:
-- **Jagdzeiten**: Gesetzliche Schonzeiten verschiedener Wildarten
-- **Bestandsmanagement**: Nachhaltige Jagd und Wildbestandspflege
-- **Verfügbarkeitsplanung**: Vorausschauende Lagerung für ganzjährige Belieferung
+--- 
+<br>
 
-### Traditionelles Handwerk trifft Digitalisierung
-- **Familienbetrieb-Charakter**: Bewahrung traditioneller Werte im digitalen Zeitalter
-- **Handwerkskunst**: 30 Jahre Erfahrung in der Wildverarbeitung
-- **Moderne Präsentation**: Zeitgemäße Darstellung traditioneller Produkte
+### Technologiestack
 
-## Standort & Erreichbarkeit
+- **Frontend**: Astro, Tailwind CSS
+- **Optimierungen**:
+  - **Ladezeit**: Lazy Loading, statisches Rendering
+  - **SEO**: Strukturierte Daten, saubere URLs, sprechende Meta-Tags
 
-**Fläming-Wildhandel**
-- **Inhaber**: Jan Griebsch
-- **Adresse**: Bardenitzer Dorfstr. 56, 14929 Treuenbrietzen
-- **Kontakt**: 
-  - Tel.: 033 748 / 155 97
-  - Fax: 033 748 / 219 30
-  - E-Mail: info@flaeming-wildhandel.de
-- **Social Media**: Instagram @flaeming_wildhandel
+<br>
 
-## Technischer Stack & Performance
+--- 
+<br>
 
-- **Frontend**: Moderne JavaScript-Frameworks für responsive Darstellung
-- **Backend**: Robuste Server-Architektur für E-Commerce-Anforderungen
-- **Datenbank**: Optimiert für komplexe Produktverwaltung und Lagerbestände
-- **Security**: SSL-Verschlüsselung und sichere Zahlungsabwicklung
-- **Performance**: Schnelle Ladezeiten auch bei hochauflösenden Produktbildern
+### Fazit & Ausblick
 
-## Erfolg & Impact
+Die neue Website ermöglicht es dem **Fläming Wildhandel**, seine Leistungen professionell zu präsentieren – regional, vertrauenswürdig und technisch zukunftssicher:
 
-Die Website hat dem regionalen Wildhandel entscheidend geholfen:
-- **Reichweitenerweiterung**: Kundenstamm über regionale Grenzen hinaus erweitert
-- **Pandemie-Resilience**: Kontinuierliche Umsätze auch während Lockdown-Phasen
-- **Kundenzufriedenheit**: Hohe Bewertungen für Benutzerfreundlichkeit und Produktqualität
-- **Markenbildung**: Stärkung der regionalen Marke "Fläming Wildhandel"
-- **Nachhaltigkeit**: Förderung regionaler Kreisläufe und nachhaltiger Jagd
-
-Die Kombination aus traditionellem Handwerk, moderner Technologie und regionalem Bewusstsein macht diese E-Commerce-Lösung zu einem herausragenden Beispiel für erfolgreiche Digitalisierung im Lebensmittelhandwerk.
+- **Stärkung der Markenwirkung**: Modernes Design mit authentischer Bildsprache
+- **Mehr Sichtbarkeit**: Durch SEO und performante Umsetzung
+- **Hohe Nutzerfreundlichkeit**: Für alle Zielgruppen – von Endkundschaft bis Gastronomiebetrieb
+- **Zukunftssicheres Fundament**: Wartungsarm, erweiterbar und bereit für neue digitale Anforderungen
