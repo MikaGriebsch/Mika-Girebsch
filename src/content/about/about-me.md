@@ -89,3 +89,13 @@ Mein Ziel ist es, Websites und Anwendungen zu entwickeln, die nicht nur technisc
 ## Persönliches
 
 Wenn ich nicht programmiere oder Sport mache, beschäftige ich mich gerne mit neuen Technologien, neuer Technik oder arbeite an persönlichen Projekten.
+
+<!-- <br>
+
+--- 
+<br>
+
+## Lebenslaugf
+<a href="public/Lebenslauf-Mika-Griebsch.pdf" download="public/Lebenslauf-Mika-Griebsch.pdf">
+    Lebenslauf Mika Griebsch
+</a> -->
