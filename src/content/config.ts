@@ -20,6 +20,7 @@ const projects = defineCollection({
 		description: z.string(),
 		heroImage: z.string(),
 		websiteUrl: z.string(),
+		linkType: z.enum(['website', 'github']).default('website'),
 		year: z.string(),
 		tags: z.array(z.string()),
 		featured: z.boolean().optional(),

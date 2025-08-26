@@ -3,6 +3,7 @@ title: "FRAUENARZT - DR. DAGMAR ROßNER"
 description: "Professioneller Webauftritt für eine Frauenarztpraxis mit modernem Design und benutzerfreundlicher Navigation innerhalb der Website für jede Altersklasse."
 heroImage: "/Rossner.png"
 websiteUrl: "https://frauenarzt-dr-dagmar-rossner.de/"
+linkType: "website"
 year: "2024"
 tags: ["Webdesign", "Neuentwicklung", "Astro"]
 featured: true

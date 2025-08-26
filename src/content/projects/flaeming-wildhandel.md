@@ -3,6 +3,7 @@ title: "FLÄMING WILDHANDEL"
 description: "Digitale Präsenz für einen regionalen Familienbetrieb – Fokus auf Performance, Barrierefreiheit und vertrauenswürdige UX für Informations- und Kontaktzwecke."
 heroImage: "/Wildhandel.png"
 websiteUrl: "https://www.flaeming-wildhandel.de/"
+linkType: "website"
 year: "2023"
 tags: ["Webentwicklung", "Neuentwicklung", "Astro"]
 featured: true

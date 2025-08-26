@@ -52,7 +52,7 @@ const sortedProjects = projects.sort((a, b) => parseInt(b.data.year) - parseInt(
                                         class="external-link"
                                         onclick="event.stopPropagation()"
                                     >
-                                        Live Website ↗
+                                        {project.data.linkType === 'github' ? 'Git Repository ↗' : 'Live Website ↗'}
                                     </a>
                                 </div>
                             </div>

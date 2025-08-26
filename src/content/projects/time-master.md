@@ -3,6 +3,7 @@ title: "TIME MASTER"
 description: "Ein Stundenplan‑Algorithmus für Grund‑ und Sekundarstufe I der ein Webportal mit personalisierten Stundenplanungen, Login-System und Administration bereitstellt."
 heroImage: "/LoginPlanner.png"
 websiteUrl: "https://github.com/MikaGriebsch/Planner"
+linkType: "github"
 year: "2025"
 tags: ["Django", "Python", "Algorithmus", "Accountsystem"]
 featured: true

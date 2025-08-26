@@ -3,6 +3,7 @@ title: "PRAXIS-MONITOR"
 description: "Mit dem PraxisMonitor‑System werden Patientinnen und Patienten im Wartebereich digital aufgerufen, während auf Displays informative Bilder und Videos angezeigt werden."
 heroImage: "/Praxis1.png"
 websiteUrl: "https://github.com/MikaGriebsch/PraxisMonitor"
+linkType: "github"
 year: "2025"
 tags: ["Automatisierung", "Performanceverbesserung", "Django"]
 featured: true

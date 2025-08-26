@@ -7,7 +7,7 @@ import { SITE_TITLE } from '../consts';
 
 type Props = CollectionEntry<'projects'>['data'];
 
-const { title, description, heroImage, websiteUrl, year, tags, extraImage } = Astro.props;
+const { title, description, heroImage, websiteUrl, linkType, year, tags, extraImage } = Astro.props;
 ---
 
 <html lang="de">
@@ -24,7 +24,7 @@ const { title, description, heroImage, websiteUrl, year, tags, extraImage } = As
                 <div class="project-meta">
                     <span class="year-badge">{year}</span>
                     <a href={websiteUrl} target="_blank" class="website-link">
-                        Website besuchen →
+                        {linkType === 'github' ? 'Repository ansehen →' : 'Website besuchen →'}
                     </a>
                 </div>
             </div>
@@ -34,7 +34,7 @@ const { title, description, heroImage, websiteUrl, year, tags, extraImage } = As
                 <img src={heroImage} alt={title} class="hero-image" />
                 <div class="image-overlay">
                     <a href={websiteUrl} target="_blank" class="overlay-link">
-                        Live ansehen
+                        {linkType === 'github' ? 'Code ansehen' : 'Live ansehen'}
                     </a>
                 </div>
             </div>
@@ -62,9 +62,9 @@ const { title, description, heroImage, websiteUrl, year, tags, extraImage } = As
             <!-- Call to Action -->
             <div class="cta-section">
                 <h3>Projekt erkunden</h3>
-                <p>Besuche die Website und erlebe das Projekt selbst:</p>
+                <p>{linkType === 'github' ? 'Schaue dir den Code an und erfahre mehr über die Implementierung:' : 'Besuche die Website und erlebe das Projekt selbst:'}</p>
                 <a href={websiteUrl} target="_blank" class="cta-button">
-                    {title} besuchen
+                    {linkType === 'github' ? `${title} Code ansehen` : `${title} besuchen`}
                 </a>
             </div>
 
