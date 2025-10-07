@@ -6,10 +6,3 @@ Allow: /
 
 # Sitemap-Verweis (wird automatisch von Astro generiert)
 Sitemap: https://mikagriebsch.onrender.com/sitemap-index.xml
-
-# Spezielle Anweisungen für wichtige Crawler
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
