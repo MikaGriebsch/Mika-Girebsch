@@ -1,16 +1,17 @@
----
-// Cookie Banner Komponente für DSGVO-konforme Einwilligung
----
+<!-- Cookie Banner  -->
 
 <div id="cookie-banner" class="cookie-banner">
   <div class="cookie-content">
+    <div class="cookie-icon">
+      🍪
+    </div>
     <div class="cookie-text">
-      <h3>Cookies & Datenschutz</h3>
-      <p>Diese Website verwendet Google Analytics für statistische Auswertungen. Durch das Klicken auf "Akzeptieren" stimmen Sie der Verwendung von Cookies zu.</p>
+      <h4>Diese Website verwendet Cookies</h4>
+      <p>Hier werden Cookies verwendet, um die Nutzung meiner Website zu analysieren und Ihre Erfahrung zu verbessern.</p>
     </div>
     <div class="cookie-buttons">
-      <button id="cookie-decline" class="cookie-btn decline">Ablehnen</button>
-      <button id="cookie-accept" class="cookie-btn accept">Akzeptieren</button>
+      <button id="cookie-decline" class="cookie-btn secondary">Nur notwendige</button>
+      <button id="cookie-accept" class="cookie-btn primary">Alle akzeptieren</button>
     </div>
   </div>
 </div>
@@ -24,34 +25,26 @@
     
     // Prüfen ob bereits eine Entscheidung getroffen wurde
     const consent = getCookie('analytics_consent');
-    console.log('Cookie Banner: Aktueller consent status:', consent);
     
     if (consent !== null) {
       banner.style.display = 'none';
-      console.log('Cookie Banner: Banner versteckt - Entscheidung bereits getroffen');
       if (consent === 'true') {
-        console.log('Cookie Banner: Lade Google Analytics (Zustimmung vorhanden)');
         loadGoogleAnalytics();
-      } else {
-        console.log('Cookie Banner: Google Analytics NICHT geladen (Ablehnung)');
       }
     } else {
       banner.style.display = 'block';
-      console.log('Cookie Banner: Banner angezeigt - keine Entscheidung gefunden');
     }
     
     // Akzeptieren Button
     acceptBtn.onclick = function() {
-      console.log('Cookie Banner: Nutzer hat AKZEPTIERT');
-      setCookie('analytics_consent', 'true', 365);
+      setCookie('analytics_consent', 'true', 180); // 6 Monate
       banner.style.display = 'none';
       loadGoogleAnalytics();
     };
     
     // Ablehnen Button
     declineBtn.onclick = function() {
-      console.log('Cookie Banner: Nutzer hat ABGELEHNT');
-      setCookie('analytics_consent', 'false', 365);
+      setCookie('analytics_consent', 'false', 90); // 3 Monate
       banner.style.display = 'none';
     };
   }
@@ -107,95 +100,152 @@
 <style>
   .cookie-banner {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #e4e4e6;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--background);
+    border: 1px solid var(--accent-background-2);
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
     z-index: 10000;
     display: none;
-    padding: 20px;
+    padding: 24px;
+    font-family: 'Instrument Sans', sans-serif;
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   
   .cookie-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    gap: 16px;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+    text-align: center;
   }
   
-  .cookie-text h3 {
+  .cookie-icon {
+    font-size: 2.5em;
+    margin-bottom: 8px;
+  }
+  
+  .cookie-text h4 {
     margin: 0 0 8px 0;
-    font-size: 1.1em;
-    color: var(--font);
+    font-size: 1.2em;
     font-weight: 600;
+    color: var(--font);
+    line-height: 1.3;
   }
   
   .cookie-text p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: rgb(var(--gray));
-    line-height: 1.4;
+    line-height: 1.5;
   }
   
   .cookie-buttons {
     display: flex;
     gap: 12px;
-    flex-shrink: 0;
+    width: 100%;
+    margin-top: 8px;
   }
   
   .cookie-btn {
-    padding: 10px 20px;
+    flex: 1;
+    padding: 12px 20px;
     border: none;
-    border-radius: 8px;
-    font-size: 0.9em;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    border-radius: 12px;
+    font-size: 0.95em;
+    font-weight: 600;
     font-family: inherit;
+    cursor: url('/cursor.png') 16 16, auto;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
   }
   
-  .cookie-btn.accept {
-    background: var(--accent);
+  .cookie-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .cookie-btn.primary {
+    background: #000000;
     color: white;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   }
   
-  .cookie-btn.accept:hover {
-    background: var(--accent-dark);
-    transform: translateY(-1px);
+  .cookie-btn.primary:hover {
+    background: #282936;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   }
   
-  .cookie-btn.decline {
-    background: var(--accent-background);
-    color: var(--font);
-    border: 1px solid var(--accent-background-2);
+  .cookie-btn.secondary {
+    background: white;
+    color: #000000;
+    border: 1px solid #000000;
   }
   
-  .cookie-btn.decline:hover {
-    background: var(--accent-background-2);
-    transform: translateY(-1px);
+  .cookie-btn.secondary:hover {
+    background: #000000;
+    color: white;
+    border-color: #000000;
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .cookie-content {
-      flex-direction: column;
-      text-align: center;
+  @media (max-width: 480px) {
+    .cookie-banner {
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      padding: 20px;
     }
     
     .cookie-buttons {
-      justify-content: center;
-      width: 100%;
+      flex-direction: column;
     }
     
     .cookie-btn {
-      flex: 1;
-      max-width: 150px;
+      flex: none;
+      padding: 14px 20px;
+    }
+    
+    .cookie-text h4 {
+      font-size: 1.1em;
+    }
+    
+    .cookie-text p {
+      font-size: 0.9em;
+    }
+  }
+  
+  /* Tablet Layout */
+  @media (min-width: 768px) {
+    .cookie-banner {
+      bottom: 30px;
+      left: 30px;
+      right: auto;
+      max-width: 400px;
+    }
+  }
+  
+  /* Desktop Layout */
+  @media (min-width: 1024px) {
+    .cookie-banner {
+      bottom: 40px;
+      left: 40px;
+      max-width: 420px;
     }
   }
 </style>
