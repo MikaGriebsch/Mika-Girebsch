@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	// Aktualisiere diese URL zu deiner echten Domain
+	site: 'https://mikagriebsch.onrender.com',
 	integrations: [mdx(), sitemap()],
 });

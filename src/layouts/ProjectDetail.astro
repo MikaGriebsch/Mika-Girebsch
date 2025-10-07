@@ -13,7 +13,7 @@ const { title, description, heroImage, websiteUrl, linkType, year, tags, extraIm
 
 <html lang="de">
 <head>
-    <BaseHead title={`${title} - ${SITE_TITLE}`} description={description} />
+    <BaseHead title={`${title} - ${SITE_TITLE}`} description={description} image={heroImage} />
 </head>
 <body>
     <Header />
@@ -32,7 +32,7 @@ const { title, description, heroImage, websiteUrl, linkType, year, tags, extraIm
 
             <!-- Hero Image -->
             <div class="hero-image-container">
-                <img src={heroImage} alt={title} class="hero-image" />
+                <img src={heroImage} alt={`Screenshot vom Projekt ${title}`} class="hero-image" />
                 <div class="image-overlay">
                     <a href={websiteUrl} target="_blank" class="overlay-link">
                         {linkType === 'github' ? 'Code ansehen' : 'Live ansehen'}

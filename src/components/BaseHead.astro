@@ -2,23 +2,48 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { SITE_URL, AUTHOR_NAME, AUTHOR_JOB_TITLE, AUTHOR_LOCATION, AUTHOR_IMAGE, AUTHOR_GITHUB, AUTHOR_LINKEDIN } from '../consts';
 
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	isHomePage?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { title, description, image = '/blog-placeholder-1.jpg', isHomePage = false } = Astro.props;
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+// Schema.org JSON-LD für strukturierte Daten
+const schemaData = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": AUTHOR_NAME,
+	"url": SITE_URL,
+	"image": `${SITE_URL}${AUTHOR_IMAGE}`,
+	"jobTitle": AUTHOR_JOB_TITLE,
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": AUTHOR_LOCATION,
+		"addressCountry": "DE"
+	},
+	"sameAs": [
+		AUTHOR_GITHUB,
+		AUTHOR_LINKEDIN
+	]
+};
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+<link rel="icon" type="image/png" href="/Favicon.png" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- SEO Meta Tags -->
+<meta name="author" content={AUTHOR_NAME} />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="de" />
 
 <!-- Font preloads -->
 <!-- <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
@@ -36,15 +61,24 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content={isHomePage ? "profile" : "website"} />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image:alt" content={`Profilbild von ${AUTHOR_NAME}`} />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content={AUTHOR_NAME} />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:image:alt" content={`Profilbild von ${AUTHOR_NAME}`} />
+
+<!-- Schema.org JSON-LD für strukturierte Daten -->
+{isHomePage && (
+	<script type="application/ld+json" set:html={JSON.stringify(schemaData, null, 2)}></script>
+)}
