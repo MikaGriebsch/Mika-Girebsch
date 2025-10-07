@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mikagriebsch.onrender.com/sitemap.xml
+Sitemap: https://mika-griebsch.onrender.com/sitemap.xml
