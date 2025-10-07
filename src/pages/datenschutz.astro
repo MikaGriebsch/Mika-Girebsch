@@ -1,0 +1,175 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<html lang="de">
+    <head>
+        <BaseHead title={`Datenschutzerklärung - ${SITE_TITLE}`} description="Datenschutzerklärung und rechtliche Hinweise von Mika Griebsch" />
+    </head>
+
+    <body>
+        <Header />
+        <main>
+            <article>
+                <div class="prose">
+                    <div class="title">
+                        <h1>Datenschutzerklärung</h1>
+                        <hr />
+                    </div>
+
+                    <div class="section">
+                        <h2>1. Verantwortliche Stelle</h2>
+                        <p>
+                            Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br><br>
+                            Mika Griebsch<br>
+                            Sattlerstr. 38<br>
+                            14469 Potsdam<br>
+                            Deutschland<br><br>
+                            E-Mail: mika.griebsch@gmail.com
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2>2. Allgemeine Hinweise</h2>
+                        <p>
+                            Der Schutz Ihrer persönlichen Daten ist uns wichtig. Ihre Daten werden im Rahmen der gesetzlichen Vorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO), verarbeitet.
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2>3. Erhebung und Speicherung personenbezogener Daten</h2>
+                        <p>
+                            Beim Besuch dieser Website werden automatisch Informationen durch den Browser an den Server übermittelt. Diese Daten umfassen:
+                        </p>
+                        <ul>
+                            <li>IP-Adresse (in anonymisierter Form)</li>
+                            <li>Datum und Uhrzeit des Zugriffs</li>
+                            <li>Browsertyp und Version</li>
+                            <li>verwendetes Betriebssystem</li>
+                            <li>Referrer-URL</li>
+                        </ul>
+                        <p>
+                            Diese Daten werden ausschließlich zur Gewährleistung eines reibungslosen Betriebs der Website und zur Verbesserung des Angebots verwendet. Eine Zusammenführung dieser Daten mit anderen Quellen erfolgt nicht.
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2>4. Verwendung von Cookies</h2>
+                        <p>
+                            Diese Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Einige Cookies sind technisch notwendig, andere helfen uns, die Nutzung der Website zu analysieren. Beim ersten Besuch werden Sie über ein Cookie-Banner gefragt, ob Sie zustimmen möchten. Die Einwilligung kann jederzeit über das Cookie-Banner widerrufen werden.
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2>5. Einsatz von Google Analytics</h2>
+                        <p>
+                            Diese Website nutzt den Dienst <strong>Google Analytics 4</strong>, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
+                        </p>
+                        <p>
+                            Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website ermöglichen. Die durch die Cookies erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.
+                        </p>
+                        <p>
+                            Die IP-Anonymisierung ist auf dieser Website aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb der EU oder des EWR gekürzt, bevor sie in die USA übertragen wird. Nur in Ausnahmefällen wird die volle IP-Adresse an Google-Server in den USA übertragen und dort gekürzt.
+                        </p>
+                        <p>
+                            Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit über das Cookie-Banner widerrufen.
+                        </p>
+                        <p>
+                            Weitere Informationen zum Datenschutz bei Google finden Sie hier:<br>
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2>6. Hosting über Render</h2>
+                        <p>
+                            Diese Website wird bei <strong>Render</strong> (Render, Inc., 475 Valencia Street, San Francisco, CA 94103, USA) gehostet. Render speichert zur Bereitstellung und Wartung des Dienstes technische Informationen (z. B. Server-Logs). 
+                        </p>
+                        <p>
+                            Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und effizienten Bereitstellung der Website).
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2>7. Rechte der betroffenen Personen</h2>
+                        <p>
+                            Sie haben das Recht:
+                        </p>
+                        <ul>
+                            <li>gemäß Art. 15 DSGVO Auskunft über Ihre verarbeiteten Daten zu verlangen,</li>
+                            <li>gemäß Art. 16 DSGVO Berichtigung unrichtiger Daten zu verlangen,</li>
+                            <li>gemäß Art. 17 DSGVO Löschung zu verlangen („Recht auf Vergessenwerden“),</li>
+                            <li>gemäß Art. 18 DSGVO Einschränkung der Verarbeitung zu verlangen,</li>
+                            <li>gemäß Art. 20 DSGVO Datenübertragbarkeit zu verlangen,</li>
+                            <li>gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung einzulegen.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>8. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+                        <p>
+                            Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt.
+                        </p>
+                        <p>
+                            Zuständige Aufsichtsbehörde (für Brandenburg):<br>
+                            Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg<br>
+                            Stahnsdorfer Damm 77<br>
+                            14532 Kleinmachnow<br>
+                            <a href="https://www.lda.brandenburg.de" target="_blank" rel="noopener noreferrer">https://www.lda.brandenburg.de</a>
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2>9. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+                        <p>
+                            Diese Datenschutzerklärung wurde zuletzt am 7. Oktober 2025 aktualisiert. Wir behalten uns vor, sie künftig anzupassen, falls gesetzliche oder technische Änderungen dies erfordern.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <Footer />
+        <CookieBanner />
+    </body>
+</html>
+
+<style>
+    main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+    }
+    .prose {
+        width: 720px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 1em;
+        color: rgb(var(--gray-dark));
+    }
+    .title {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        text-align: center;
+        line-height: 1;
+    }
+    .title h1 {
+        margin: 0 0 0.5em 0;
+    }
+    .section {
+        margin-bottom: 2em;
+    }
+    .section h2 {
+        color: rgb(var(--gray-dark));
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+    }
+    .section ul {
+        padding-left: 1.2em;
+        list-style-type: disc;
+    }
+</style>

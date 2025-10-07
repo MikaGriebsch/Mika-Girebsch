@@ -1,0 +1,113 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<html lang="de">
+    <head>
+        <BaseHead title={`Impressum - ${SITE_TITLE}`} description="Impressum und rechtliche Hinweise von Mika Griebsch" />
+        
+    </head>
+
+    <body>
+        <Header />
+        <main>
+            <article>
+                <div class="prose">
+                    <div class="title">
+                        <h1>Impressum</h1>
+                        <hr />
+                    </div>
+
+                    <div class="section">
+                        <p><strong>Angaben gemäß § 5 TMG und § 18 MStV</strong></p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Verantwortlich für den Inhalt dieser Website:</h2>
+                        <div class="contact-info">
+                            Mika Griebsch<br>
+                            Sattlerstr. 38<br>
+                            14469 Potsdam<br>
+                            Deutschland<br><br>
+                            E-Mail: mika.griebsch@gmail.com
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Verantwortlich gemäß § 18 Abs. 2 MStV:</h2>
+                        <p>Mika Griebsch (Anschrift wie oben)</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Hosting:</h2>
+                        <div class="hosting-info">
+                            Diese Website wird gehostet von<br>
+                            Render, Inc.<br>
+                            475 Valencia Street, San Francisco, CA 94103, USA<br>
+                            (<a href="https://render.com" target="_blank" rel="noopener noreferrer">https://render.com</a>)
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Haftungsausschluss:</h2>
+                        <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Urheberrecht:</h2>
+                        <p>Die Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <Footer />
+        <CookieBanner />
+    </body>
+</html>
+
+<style>
+    main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+    }
+    .prose {
+        width: 720px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 1em;
+        color: rgb(var(--gray-dark));
+    }
+    .title {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        text-align: center;
+        line-height: 1;
+    }
+    .title h1 {
+        margin: 0 0 0.5em 0;
+    }
+    .section {
+        margin-bottom: 2em;
+    }
+    .section h2 {
+        color: rgb(var(--gray-dark));
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+    }
+    .contact-info {
+        margin: 1em 0;
+        line-height: 1.8;
+    }
+    .hosting-info {
+        background-color: var(--accent-background);
+        padding: 1em;
+        border-radius: 8px;
+        margin: 1em 0;
+    }
+</style>
