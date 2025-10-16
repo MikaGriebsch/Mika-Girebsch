@@ -118,6 +118,20 @@ main {
         -1px 1px 0 var(--font),
         1px 1px 0 var(--font);
 }
+
+@media (max-width: 720px) {
+    .outlined-text-active-mobile {
+        position: relative;
+        display: inline;
+        color: white;
+        text-shadow: 
+            -5px -5px 0 var(--font),  
+            1px -1px 0 var(--font),
+            -1px 1px 0 var(--font),
+            1px 1px 0 var(--font);
+    }
+}
+
 h1,
 h2,
 h3,

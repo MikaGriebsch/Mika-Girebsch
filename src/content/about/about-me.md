@@ -4,7 +4,7 @@ description: 'Lerne mehr über meine Reise als Webentwickler – von den ersten 
 heroImage: '/Me.jpg'
 ---
 
-## Der Anfang einer Leidenschaft
+<h2 id="der-anfang-einer-leidenschaft">Der Anfang einer Leidenschaft</h2>
 
 Mit 13 Jahren entdeckte ich meine Faszination für die Programmierung. Was als Neugier begann, entwickelte sich schnell zu einer echten Leidenschaft. Meine ersten Schritte machte ich mit **Java** und **Python**, doch die Webentwicklung zog mich besonders in ihren Bann.
 <br>
@@ -12,7 +12,7 @@ Mit 13 Jahren entdeckte ich meine Faszination für die Programmierung. Was als N
 ---
 <br>
 
-## Lernen durch Praxis
+<h2 id="lernen-durch-praxis">Lernen durch Praxis</h2>
 
 Über zwei Jahre hinweg hatte ich das Privileg, ein Familienmitglied bei verschiedenen Webentwicklungsprojekten zu begleiten. Dabei arbeitete ich intensiv mit **Django** und sammelte wertvolle praktische Erfahrungen:
 
@@ -25,12 +25,15 @@ Mit 13 Jahren entdeckte ich meine Faszination für die Programmierung. Was als N
 - Datenbankdesign und -optimierung
 - Server-Konfiguration und Deployment
 
+### Point Omega 
+Seit Oktober 2025 arbeite ich als Werkstudent bei der "point omega AG" und kann dort mit einem Team im Bereich der Webentwicklung und AI-Engineering wertvolle Erfahrungen sammeln.
+
 <br>
 
 ---
 <br>
 
-## Schulischer Hintergrund
+<h2 id="schulischer-hintergrund">Schulischer Hintergrund</h2>
 
 In der Oberstufe belegte ich die Leistungskurse **Mathematik** und **Informatik** – zwei Fächer, die meine analytischen Fähigkeiten und mein technisches Denken weiter geschärft haben. Besonders im Informatikunterricht konnte ich mein Wissen durch zahlreiche kleinere Projekte mit **Java** und **Python** praktisch anwenden.
 
